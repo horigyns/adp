@@ -1,0 +1,163 @@
+{
+  "spec": "ADP-1 (Akaeon Declaration Protocol, version 1.0)",
+  "generated_by": "spec/adp-1/gen-vectors.mjs (deterministic — fixed seeds, no clock, no randomness)",
+  "note": "All keys are derived from fixed test seeds (0x11.., 0x22.., 0x33..) and MUST NOT be used in production. Regenerating with the same generator yields byte-identical output.",
+  "asset_for_work_vector": {
+    "bytes_utf8": "The quick brown fox jumps over the lazy dog.\n",
+    "sha256": "b47cc0f104b62d4c7c30bcd68fd8e67613e287dc4ad8c310ef10cbadea9c4380"
+  },
+  "anchor": {
+    "arweave_tx_id": "hYeepf4UxsElVBvKxf0zE1E6GQDCMpJcPqQny_w4g-0",
+    "arweave_url": "https://arweave.net/hYeepf4UxsElVBvKxf0zE1E6GQDCMpJcPqQny_w4g-0",
+    "note": "In production arweave_tx_id is a real Arweave transaction id and arweave_url returns the anchored_payload below. The offline test harness reads anchored_payload directly so the verifiers run with no network.",
+    "anchored_payload": {
+      "adp_version": "1.0",
+      "type": "anchor-batch",
+      "batch_id": "01JADP00000000000000BATCH1",
+      "merkle_root_sha256": "df506c9db6a2e6b5d777aee0af0beba2704856f1df1db71f86da95b170016ca1",
+      "leaf_count": 2,
+      "tree_construction": "rfc6962",
+      "anchor_signature": {
+        "alg": "ed25519",
+        "canonical_message": "adp:anchor:v1|01JADP00000000000000BATCH1|df506c9db6a2e6b5d777aee0af0beba2704856f1df1db71f86da95b170016ca1|2",
+        "signature": "z7PxW5YItLb39oegsYN6+xV+wjS0peo2gcTpSQ8BtszhPT2bwRRrVn+KV2WJ3yAXZwTIZ7teTkzVba/nXSP/CA==",
+        "public_key": "0EqyMnQrtKs6E2i9RhXk5tAiSrcaAWuvhSCjMsl3hzc="
+      }
+    }
+  },
+  "declarations": [
+    {
+      "description": "Domain-scope opt-out, DNS authority, granular per-use/per-actor reservations.",
+      "declaration": {
+        "adp_version": "1.0",
+        "schema_version": 1,
+        "declaration_id": "01JADP000000000000000DOMN1",
+        "subject": {
+          "scope": "domain",
+          "domain": "example-publisher.com"
+        },
+        "reservations": [
+          {
+            "use": "tdm",
+            "actor": "any",
+            "status": "reserved"
+          },
+          {
+            "use": "ai-train",
+            "actor": "any",
+            "status": "reserved"
+          },
+          {
+            "use": "ai-train",
+            "actor": "search-index",
+            "status": "permitted"
+          }
+        ],
+        "declarant": {
+          "id": "did:web:example-publisher.com",
+          "public_key": "oJql9HpnWYAv+VX43C0qFKXJnSO+l/hkEn/5ODRVpPA=",
+          "public_key_alg": "ed25519"
+        },
+        "authority": {
+          "method": "dns-01",
+          "proof": "_adp-challenge.example-publisher.com",
+          "proof_digest_sha256": "d8811d214599bf1e494b8aa7187e73038941933be8295aae5269731cc8c3a686"
+        },
+        "effective_from": "2026-05-11T00:00:00Z",
+        "issued_at": "2026-05-11T14:31:00Z",
+        "supersedes": null
+      },
+      "canonical_declaration_utf8": "{\"adp_version\":\"1.0\",\"authority\":{\"method\":\"dns-01\",\"proof\":\"_adp-challenge.example-publisher.com\",\"proof_digest_sha256\":\"d8811d214599bf1e494b8aa7187e73038941933be8295aae5269731cc8c3a686\"},\"declarant\":{\"id\":\"did:web:example-publisher.com\",\"public_key\":\"oJql9HpnWYAv+VX43C0qFKXJnSO+l/hkEn/5ODRVpPA=\",\"public_key_alg\":\"ed25519\"},\"declaration_id\":\"01JADP000000000000000DOMN1\",\"effective_from\":\"2026-05-11T00:00:00Z\",\"issued_at\":\"2026-05-11T14:31:00Z\",\"reservations\":[{\"actor\":\"any\",\"status\":\"reserved\",\"use\":\"tdm\"},{\"actor\":\"any\",\"status\":\"reserved\",\"use\":\"ai-train\"},{\"actor\":\"search-index\",\"status\":\"permitted\",\"use\":\"ai-train\"}],\"schema_version\":1,\"subject\":{\"domain\":\"example-publisher.com\",\"scope\":\"domain\"},\"supersedes\":null}",
+      "canonical_declaration_sha256": "b37f9b1b037df75ed8a7cc89e3c07c642960f0d1f8fe05ed5683d5c36210cd37",
+      "declarant_proof": {
+        "type": "declarant-signature",
+        "alg": "ed25519",
+        "canonical_message": "adp:declaration:v1|01JADP000000000000000DOMN1|b37f9b1b037df75ed8a7cc89e3c07c642960f0d1f8fe05ed5683d5c36210cd37",
+        "signature": "Zx7lzKuee9nJ4ngVjCQRt5TO2LnhLioJc3oy7WCGpRoycalAF74FN9KB9Rl3NF/3Ke8tDT5neZV5k2AI06LvCA==",
+        "public_key": "oJql9HpnWYAv+VX43C0qFKXJnSO+l/hkEn/5ODRVpPA="
+      },
+      "leaf_hash_sha256": "894e2626f6c06de16cffb98915ce1d3f43722903a302f867971d3b75b3f1fc48",
+      "leaf_index": 0,
+      "tree_size": 2,
+      "merkle_proof": [
+        "8dd76bd375c6e4666fddb9c7e5b869d0ccf6833dcd8044dabc3c7ff336b2a85c"
+      ],
+      "merkle_root_sha256": "df506c9db6a2e6b5d777aee0af0beba2704856f1df1db71f86da95b170016ca1"
+    },
+    {
+      "description": "Per-work opt-in licensing offer, content-id subject, signature-chain authority.",
+      "declaration": {
+        "adp_version": "1.0",
+        "schema_version": 1,
+        "declaration_id": "01JADP000000000000000WORK2",
+        "subject": {
+          "scope": "work",
+          "cid": [
+            {
+              "type": "sha256",
+              "value": "b47cc0f104b62d4c7c30bcd68fd8e67613e287dc4ad8c310ef10cbadea9c4380"
+            },
+            {
+              "type": "iscc",
+              "value": "ISCC:KACYPXW563EDNM"
+            },
+            {
+              "type": "stelais-fp",
+              "value": "phash:dct64:9f1c2a4b8e7d6f30"
+            }
+          ]
+        },
+        "reservations": [
+          {
+            "use": "ai-train",
+            "actor": "any",
+            "status": "permitted",
+            "terms": {
+              "license": "RSL-1.0",
+              "license_url": "https://example-creator.com/license",
+              "price_signal": {
+                "amount_minor": 2500,
+                "currency": "USD",
+                "unit": "per-work"
+              },
+              "contact": "licensing@example-creator.com"
+            }
+          },
+          {
+            "use": "ai-train",
+            "actor": "no-attribution",
+            "status": "reserved"
+          }
+        ],
+        "declarant": {
+          "id": "key:ed25519:declarant-b",
+          "public_key": "F8t5+ytBIPKx7GXkGY1uCLKOgT/rAeSkAIObheGAgM4=",
+          "public_key_alg": "ed25519"
+        },
+        "authority": {
+          "method": "sig-chain",
+          "proof": "self-asserted-authorship"
+        },
+        "effective_from": "2026-05-11T00:00:00Z",
+        "issued_at": "2026-05-11T14:32:10Z",
+        "supersedes": null
+      },
+      "canonical_declaration_utf8": "{\"adp_version\":\"1.0\",\"authority\":{\"method\":\"sig-chain\",\"proof\":\"self-asserted-authorship\"},\"declarant\":{\"id\":\"key:ed25519:declarant-b\",\"public_key\":\"F8t5+ytBIPKx7GXkGY1uCLKOgT/rAeSkAIObheGAgM4=\",\"public_key_alg\":\"ed25519\"},\"declaration_id\":\"01JADP000000000000000WORK2\",\"effective_from\":\"2026-05-11T00:00:00Z\",\"issued_at\":\"2026-05-11T14:32:10Z\",\"reservations\":[{\"actor\":\"any\",\"status\":\"permitted\",\"terms\":{\"contact\":\"licensing@example-creator.com\",\"license\":\"RSL-1.0\",\"license_url\":\"https://example-creator.com/license\",\"price_signal\":{\"amount_minor\":2500,\"currency\":\"USD\",\"unit\":\"per-work\"}},\"use\":\"ai-train\"},{\"actor\":\"no-attribution\",\"status\":\"reserved\",\"use\":\"ai-train\"}],\"schema_version\":1,\"subject\":{\"cid\":[{\"type\":\"sha256\",\"value\":\"b47cc0f104b62d4c7c30bcd68fd8e67613e287dc4ad8c310ef10cbadea9c4380\"},{\"type\":\"iscc\",\"value\":\"ISCC:KACYPXW563EDNM\"},{\"type\":\"stelais-fp\",\"value\":\"phash:dct64:9f1c2a4b8e7d6f30\"}],\"scope\":\"work\"},\"supersedes\":null}",
+      "canonical_declaration_sha256": "07dcef5ae2be02c7d627f4a657a8da7aeaa263c76dda99040fadcf4e15b53058",
+      "declarant_proof": {
+        "type": "declarant-signature",
+        "alg": "ed25519",
+        "canonical_message": "adp:declaration:v1|01JADP000000000000000WORK2|07dcef5ae2be02c7d627f4a657a8da7aeaa263c76dda99040fadcf4e15b53058",
+        "signature": "iGEV61MfDLf2QzOUUIFHbf7n6FA4+3ij8+qW8CStHKe/HcUxT+feiP6Mxj91L9vF7fcqOcjyqcJLSghUAm+ZBw==",
+        "public_key": "F8t5+ytBIPKx7GXkGY1uCLKOgT/rAeSkAIObheGAgM4="
+      },
+      "leaf_hash_sha256": "8dd76bd375c6e4666fddb9c7e5b869d0ccf6833dcd8044dabc3c7ff336b2a85c",
+      "leaf_index": 1,
+      "tree_size": 2,
+      "merkle_proof": [
+        "894e2626f6c06de16cffb98915ce1d3f43722903a302f867971d3b75b3f1fc48"
+      ],
+      "merkle_root_sha256": "df506c9db6a2e6b5d777aee0af0beba2704856f1df1db71f86da95b170016ca1"
+    }
+  ]
+}

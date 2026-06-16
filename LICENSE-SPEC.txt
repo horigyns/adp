@@ -1,0 +1,18 @@
+ADP-1 specification text — License
+==================================
+
+The specification text in this repository — SPEC.md and any prose
+documentation — is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+You are free to share and adapt the specification text for any purpose,
+including commercially, provided you give appropriate credit to Akaeon, link to
+the license, and indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+SPDX-License-Identifier: CC-BY-4.0
+
+Note: the reference CODE and test vectors in this repository (verify.py,
+verify.mjs, gen-vectors.mjs, test-vectors.json) are licensed separately under
+the Apache License 2.0 — see LICENSE-CODE.txt.
